@@ -8,11 +8,10 @@ namespace RobotVsDinosaurs
 {
     public class Herd
     {
-        public Dinosaur dinosaur;
-
+        
         // MEMBER VARIABLES ( HAS A )
 
-        
+        public List<Dinosaur> dinosaurs = new List<Dinosaur>();
 
         // CONSTRUCTER (SPAWNER)
 

@@ -26,7 +26,7 @@ namespace RobotVsDinosaurs
             this.name = name;
             health = 100;
             powerLevel = 100;
-            this.weapon = new Weapon("sword", 4);
+            this.weapon = weapon;
 
         }
 
