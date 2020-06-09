@@ -10,6 +10,8 @@ namespace RobotVsDinosaurs
     {
         // MEMBER VARIABLES ( HAS A )
 
+
+
         public string weaponName;
         public int attackPower;
         
@@ -21,6 +23,8 @@ namespace RobotVsDinosaurs
         {
             this.weaponName = weaponName;
             this.attackPower = attackPower;
+
+            
         }
 
 

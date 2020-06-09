@@ -29,6 +29,12 @@ namespace RobotVsDinosaurs
         }
         
         //MEMBER METHODS
+
+        public void DinoAttacksToRobot(Robot robot)
+        {
+            robot.health = attackPower;
+            Console.WriteLine($"{type} attacked to {robot}. And {robot} new health is {robot.health}.");
+        }
     }
 }
 
