@@ -11,9 +11,9 @@ namespace RobotVsDinosaurs
 
         //MEMBER VARIABLES(HAS A)
 
-        string name;
-        int health;
-        int powerLevel;
+        public string name;
+        public int health;
+        public int powerLevel;
         Weapon weapon;
 
 
@@ -28,10 +28,18 @@ namespace RobotVsDinosaurs
             powerLevel = 100;
             this.weapon = weapon;
 
+            
+
         }
 
 
         //MEMBER METHODS
+
+        public void RobotAttacksToDino(Dinosaur dinosaur)
+        {
+            dinosaur.health -= weapon.attackPower;
+            Console.WriteLine($"{name} attacked to {dinosaur} with {weapon}. And {dinosaur} new health is {dinosaur.health}.");
+        }
     }
 }
 
