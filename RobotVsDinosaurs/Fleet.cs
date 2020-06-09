@@ -7,9 +7,9 @@ namespace RobotVsDinosaurs
 
         // MEMBER VARIABLES ( HAS A )
         // I want the created Robot objects in Fleet
-        public List<Robot> robots;
+        public List<Robot> fleet;
         public List<Weapon> weapons;
-        public Fleet fleet;
+      
         public Robot robot1;
         public Robot robot2;
         public Robot robot3;
@@ -18,9 +18,9 @@ namespace RobotVsDinosaurs
         // CONSTRUCTER (SPAWNER)
         public Fleet()
         {
-            robots = new List<Robot>();
+            fleet = new List<Robot>();
             weapons = new List<Weapon>();
-            fleet = new Fleet();
+            
             //move the instantiation of the three robots in here
             //After instantiating, add them to the robots list
 
@@ -32,9 +32,9 @@ namespace RobotVsDinosaurs
             robot2 = new Robot("Kadir", weapons[2]);
             robot3 = new Robot("Mustafa", weapons[0]);
 
-            fleet.robots.Add(robot1);
-            fleet.robots.Add(robot2);
-            fleet.robots.Add(robot3);
+            fleet.Add(robot1);
+            fleet.Add(robot2);
+            fleet.Add(robot3);
 
 
         }

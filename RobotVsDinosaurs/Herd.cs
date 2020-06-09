@@ -11,7 +11,7 @@ namespace RobotVsDinosaurs
 
         // MEMBER VARIABLES ( HAS A )
 
-        public List<Dinosaur> dinosaurs;
+        public List<Dinosaur> herd;
         public Dinosaur dino1;
         public Dinosaur dino2;
         public Dinosaur dino3;
@@ -20,15 +20,15 @@ namespace RobotVsDinosaurs
 
         public Herd()
         {
-           dinosaurs = new List<Dinosaur>();
+            herd = new List<Dinosaur>();
 
             dino1 = new Dinosaur("Velociraptor", 3);
             dino2 = new Dinosaur("Allosaurus", 5);
             dino3 = new Dinosaur("Carnotaurus", 8);
 
-            dinosaurs.Add(dino1);
-            dinosaurs.Add(dino2);
-            dinosaurs.Add(dino3);
+            herd.Add(dino1);
+            herd.Add(dino2);
+            herd.Add(dino3);
 
         }
 
