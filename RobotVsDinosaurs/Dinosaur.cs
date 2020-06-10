@@ -27,13 +27,17 @@ namespace RobotVsDinosaurs
             this.energy = 100;
             this.attackPower = attackPower;
         }
-        
+
         //MEMBER METHODS
 
         public void DinoAttacksToRobot(Robot robot)
         {
             robot.health -= attackPower;
-            Console.WriteLine($"{type} attacked to {robot}. And {robot} new health is {robot.health}.");
+            if (robot.health < 0)
+            {
+                robot.health = 0;
+            }
+            
         }
     }
 }
@@ -45,8 +49,3 @@ namespace RobotVsDinosaurs
 
 
 
-
-//type = "Jurassic";
-//            health = 100;
-//            energy = 100;
-//            attackPower = 100;

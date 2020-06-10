@@ -37,8 +37,17 @@ namespace RobotVsDinosaurs
 
         public void RobotAttacksToDino(Dinosaur dinosaur)
         {
+
+            
             dinosaur.health -= weapon.attackPower;
-            Console.WriteLine($"{name} attacked to {dinosaur} with {weapon}. And {dinosaur} new health is {dinosaur.health}.");
+
+            if (dinosaur.health < 0)
+            {
+                dinosaur.health = 0;
+                
+            }
+            
+            
         }
     }
 }

@@ -12,16 +12,16 @@ namespace RobotVsDinosaurs
 
 
 
-        public string weaponName;
+        public string name;
         public int attackPower;
         
 
         // CONSTRUCTER (SPAWNER)
 
         // this weapon going to have name and attackpower
-        public Weapon(string weaponName, int attackPower)
+        public Weapon(string name, int attackPower)
         {
-            this.weaponName = weaponName;
+            this.name = name;
             this.attackPower = attackPower;
 
             
