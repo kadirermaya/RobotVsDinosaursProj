@@ -42,20 +42,26 @@ namespace RobotVsDinosaurs
 
             while (currentRobotIndex < 3 && currentDinoIndex < 3)
             {
+                
                 robot.RobotAttacksToDino(dino);
                 dino.DinoAttacksToRobot(robot);
 
                 if (robot.health == 0)
                 {
+                    
                     currentRobotIndex++;
                     if (currentRobotIndex < 3)
                     {
+                        
                         robot = fleet.robots[currentRobotIndex];
+                    
                     }
                 }
 
+
                 if (dino.health == 0)
                 {
+                    
                     currentDinoIndex++;
                     if (currentDinoIndex < 3)
                     {
@@ -66,11 +72,17 @@ namespace RobotVsDinosaurs
 
             if (robot.health > 0)
             {
-                Console.WriteLine("Robots win the game!");
+                
+                Console.WriteLine("Dinosaurs are destroyed! ---0101010---Robots---0101010--- will take over the WORLD!");
+                Console.WriteLine(" ");
+                Console.WriteLine($"Last survived robot is {robot.name}!");
             }
             else if (dino.health > 0)
             {
-                Console.WriteLine("Dinosaurs win the game!");
+                Console.WriteLine("Robot snippets waiting for the recycle! ---$$$$$---Dinosaurs---$$$$$--- win the battle!");
+                Console.WriteLine(" ");
+                Console.WriteLine($"Last survived Dinosaur is {dino.type}!");
+                
             }
 
 

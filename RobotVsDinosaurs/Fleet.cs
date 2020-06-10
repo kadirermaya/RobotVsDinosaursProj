@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace RobotVsDinosaurs
 {
@@ -7,36 +8,26 @@ namespace RobotVsDinosaurs
 
         // MEMBER VARIABLES ( HAS A )
         // I want the created Robot objects in Fleet
-        public List<Robot> fleet;
+        public List<Robot> robots;
         public List<Weapon> weapons;
-      
-        public Robot robot1;
-        public Robot robot2;
-        public Robot robot3;
-        
+        public Random randomNum;
 
         // CONSTRUCTER (SPAWNER)
         public Fleet()
         {
-            fleet = new List<Robot>();
+            robots = new List<Robot>();
             weapons = new List<Weapon>();
-            
+            randomNum = new Random();
             //move the instantiation of the three robots in here
             //After instantiating, add them to the robots list
 
-            weapons.Add(new Weapon("sword", 3));
-            weapons.Add(new Weapon("Axe", 8));
-            weapons.Add(new Weapon("sword", 8));
+            weapons.Add(new Weapon("Sword",randomNum.Next(10)));
+            weapons.Add(new Weapon("Axe", randomNum.Next(10)));
+            weapons.Add(new Weapon("Gun", randomNum.Next(10)));
 
-            robot1 = new Robot("Selçuk", weapons[1]);
-            robot2 = new Robot("Kadir", weapons[2]);
-            robot3 = new Robot("Mustafa", weapons[0]);
-
-            fleet.Add(robot1);
-            fleet.Add(robot2);
-            fleet.Add(robot3);
-
-
+            robots.Add(new Robot("Terminator", weapons[1]));
+            robots.Add(new Robot("ThroneX", weapons[2]));
+            robots.Add(new Robot("Mr. J", weapons[0]));
         }
 
         //MEMBER METHODS

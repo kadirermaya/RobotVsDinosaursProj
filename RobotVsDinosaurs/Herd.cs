@@ -11,25 +11,21 @@ namespace RobotVsDinosaurs
 
         // MEMBER VARIABLES ( HAS A )
 
-        public List<Dinosaur> herd;
-        public Dinosaur dino1;
-        public Dinosaur dino2;
-        public Dinosaur dino3;
-
+        public List<Dinosaur> dinosaurs;
+        public Random randomNumb; 
         // CONSTRUCTER (SPAWNER)
 
         public Herd()
         {
-            herd = new List<Dinosaur>();
+            dinosaurs = new List<Dinosaur>();
+            randomNumb = new Random();
+            
 
-            dino1 = new Dinosaur("Velociraptor", 3);
-            dino2 = new Dinosaur("Allosaurus", 5);
-            dino3 = new Dinosaur("Carnotaurus", 8);
+            dinosaurs.Add(new Dinosaur("Velociraptor", randomNumb.Next(10)));
+            dinosaurs.Add(new Dinosaur("Allosaurus", randomNumb.Next(10)));
+            dinosaurs.Add(new Dinosaur("Carnotaurus", randomNumb.Next(10)));
 
-            herd.Add(dino1);
-            herd.Add(dino2);
-            herd.Add(dino3);
-
+            
         }
 
         //MEMBER METHODS
